@@ -1,0 +1,49 @@
+#icons{
+    padding-left:40px;
+    display: flex;
+    gap: 80px;
+}
+.icons-collection{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 55px;
+    padding: 30px 0px 10px 0px;
+    overflow-x: auto;       /* ✅ horizontal scroll */
+    overflow-y: hidden;
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;
+}
+.icons{
+    align-self: center;
+    width: 40px;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+}
+.icons i{
+    align-self: center;
+}
+.icons p{
+    align-self: center;
+}
+.icons:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.toggle{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 0.6px solid black;
+    border-radius: 10px;
+    height: 40px;
+    width: 230px;
+    margin-left: 30px;
+}
+.tax_info{
+    display: none;
+}

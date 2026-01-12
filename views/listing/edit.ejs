@@ -1,0 +1,93 @@
+<% layout("/layouts/boilerplate") %>
+
+<h3>Current Title : <%= onelisting.title %></h3>
+<p>Current Description : <%= onelisting.description %></p>
+<p>Current Price : &#8377; <%= onelisting.price.toLocaleString("en-IN") %> / night</p>
+<p>Current Country : <%= onelisting.country %></p>
+<p>Current Location : <%= onelisting.location %></p>
+
+<!-- show current image -->
+ <p>Current Image :</p>
+<img src="<%= originalUrl %>" style=" max-width:250px; max-height: 300px; ">
+
+<br>
+
+<div class="row">
+    <h3 class="offset-2 mb-4 mt-2">Edit listing :</h3>
+</div>
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <form 
+            action="/listing/<%= onelisting._id %>?_method=PUT" 
+            method="POST" 
+            enctype="multipart/form-data"
+        >
+
+            <div class="mb-3">
+                <label>Title</label>
+                <input 
+                    type="text" 
+                    name="listings[title]" 
+                    value="<%= onelisting.title %>" 
+                    class="form-control"
+                >
+            </div>
+
+            <div class="mb-3">
+                <label>Description</label>
+                <input 
+                    type="text" 
+                    name="listings[description]" 
+                    value="<%= onelisting.description %>" 
+                    class="form-control"
+                >
+            </div>
+
+            <!-- ✅ FILE UPLOAD (same as create) -->
+            <div class="mb-3">
+                <label>Replace image (optional)</label>
+                <input 
+                    type="file" 
+                    name="image" 
+                    class="form-control"
+                >
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label>Price</label>
+                    <input 
+                        type="number" 
+                        name="listings[price]" 
+                        value="<%= onelisting.price %>" 
+                        class="form-control"
+                    >
+                </div>
+
+                <div class="mb-3 col-md-8">
+                    <label>Country</label>
+                    <input 
+                        type="text" 
+                        name="listings[country]" 
+                        value="<%= onelisting.country %>" 
+                        class="form-control"
+                    >
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>Location</label>
+                <input 
+                    type="text" 
+                    name="listings[location]" 
+                    value="<%= onelisting.location %>" 
+                    class="form-control"
+                >
+            </div>
+
+            <br>
+            <button class="new-btn">Update</button>
+        </form>
+    </div>
+</div>

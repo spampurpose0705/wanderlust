@@ -1,0 +1,172 @@
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex-grow: 1;
+}
+
+ /* navbar*/
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-regular{
+    font-size: 2rem;
+    color: #fe424d;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+.search-bar{
+    border-radius: 20px;
+    padding: 0.7rem 4rem;
+    font-size: 0.9rem;
+}
+
+.search-btn{
+    color: #fff;
+    background-color: #fe424d;
+    border-radius: 20px;
+    padding: 0 1rem;
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-btn:hover{
+    color: #fff;
+    background-color: #fe424d;
+}
+
+/* Footer*/
+.footer{
+    height: 6rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.f-logo{
+    font-size: 1.2rem;
+    align-self: center;
+    height: 2rem;
+    color: #222222;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.f-info{
+    align-self: center;
+    height: 2rem;
+    color: #222222;
+}
+
+.f-terms a{
+    text-decoration: none;
+    align-self: center;
+    height: 2rem;
+    color: #222222;
+}
+
+.f-terms a:hover{
+    text-decoration: underline;
+
+}
+
+/*Cards*/
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.card-body{
+    padding: 0px !important;
+}
+
+.card-title{
+    font-weight: 400;
+}
+
+.card-text{
+    font-weight: 400;
+}
+
+.card-link{
+    color: #222222;
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/*New Page*/
+.new-btn{
+    height: 35px !important;
+    width: 60px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    background-color: #fe424d !important;
+}
+
+/*View page*/
+.view-img{
+    height: 30vh;
+}
+
+.view-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.view-edit-btn{
+    height: 35px !important;
+    width: 150px !important;   
+    color: #222222;
+    background-color: #fe424d !important;  
+    border: none;
+    border-radius: 7px; 
+}
+
+.view-delete-btn{
+    height: 35px !important;
+    width: 150px !important;  
+    color: white; 
+    background-color: #222222 !important;  
+    border: none;
+    border-radius: 7px; 
+}
+
+.review-delete-btn{
+    font-size: 14px;
+    margin: 10px 0px;
+    height: 28px !important;
+    width: 120px !important;  
+    color: black; 
+    background-color: white !important;  
+    /* border: none; */
+    border-radius: 7px; 
+}
