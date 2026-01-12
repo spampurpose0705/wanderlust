@@ -86,13 +86,13 @@ async function main() {
     await mongoose.connect(dbUrl);
 };
 
-app.use("/listing", listingsRouter);
-app.use("/listing/:id/reviews", reviewsRouter);
-app.use("/", usersRouter);
-
 app.get("/", (req, res) => {
     res.redirect("/listing");
 });
+
+app.use("/listing", listingsRouter);
+app.use("/listing/:id/reviews", reviewsRouter);
+app.use("/", usersRouter);
 
 app.use((req, res, next) => {
     next(new ExpressError(404, "Page not Found!"));
